@@ -1,0 +1,67 @@
+html {
+	height: 100%;
+}
+
+section.main {
+    width: 100%;
+	overflow = scroll;
+    
+}
+
+body{
+	margin: 0px;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: rgb(39,44,53);
+	font-family: Tahoma, Lucida Bright, Serif;
+}
+
+footer{
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	margin-bottom:0px;
+	background-color: black;
+	color:white;
+}
+
+aside.stnInfo {
+    float: left;
+    width: 30%;
+    margin: 0;
+    padding: 1em;
+	height: 600px;
+	margin: 0%;
+}
+
+header{
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+div.trip {
+	float: left;
+	height: 600px;
+	width: 32%;
+	overflow: scroll;
+	margin: 0%;
+	padding-left: 1em;
+}
+
+div.map {
+	float: left;
+	height: 600px;
+	width: 32%;
+	overflow: visible;
+	margin: 0%;
+	padding: 1em;
+}
+
+div.TimeCount {
+	height: 50px;
+}

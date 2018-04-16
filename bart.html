@@ -1,0 +1,72 @@
+<!-- 
+Part#5: Why is it possible for your website to load and display data from the BART API?
+
+The way my website to get data from BART API is to send a GET request but the content type is application/json.
+Hence, the client sends preflight to tell server what method and content type client using. 
+Once server accept, then client can request data from server.
+
+Reference and resource:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests
+https://developers.google.com/maps/documentation/javascript/
+https://www.w3schools.com/
+
+Node.js
+Express
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COEN315 Assignment4</title>
+	<meta charset="UTF-8">
+	<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel= "stylesheet" type="text/css" href="/css/mainbart.css">
+</head>
+
+<body>
+
+	<section class="main">
+		<header class="header">
+			<h1 id="visitCount">Welcome!</h1>
+		</header>
+		
+		<div class="trip">
+			<section class="makingTrip">
+				<h2>Source Station</h2>
+				<div class="dropdown-content-depart">
+					<select id="departList">
+						<option value="none" disabled selected>Please Select a Source Station</option>
+					</select>
+				</div>
+				<h2>Destination Station</h2>
+				<select id="destList">
+					<option value="none" disabled selected>Please Select a Destination Station</option>
+				</select>
+				<button type='button' onclick="makeTrip()">Make a Trip</button>
+				<div class="TimeCount">
+					<p id="remainingTime"></p>
+				</div>
+				<div id="tripResult">
+				</div>
+			</section>
+		</div>
+		<div class ="map" id="map">
+		</div>
+		<aside class="stnInfo" id="stnInfo">
+			<h3>Information of Source Station</h3>
+			<section>
+				<h5> Address: </h5>
+				<p id="address"></p>
+			</section>
+			<section>
+				<h5> Introduction: </h5>
+				<p id="info"></p>
+			</section>
+			<div id="route"></div>
+		</aside>
+	</section>
+	<footer>Copyright &copy; Ting-Chi Yeh</footer>
+	<script src="/js/dropdown.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4DTMCCod5OtSI-spLVO22PO-_nsD3MEg&callback=initMap" async defer></script>
+</body>
+
+</html>
